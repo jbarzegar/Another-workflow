@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-js-spa",
-  "version": "0.0.0",
-  "description": "A demo of a vanilla js spa",
+  "name": "some-tooling-stuff",
+  "version": "0.0.1",
+  "description": "A js framework agnostic workflow",
   "main": "index.js",
   "author": "James Barzegar",
   "license": "MIT",
