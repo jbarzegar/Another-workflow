@@ -3,30 +3,33 @@ import path from 'path'
 const styleExt = 'scss'
 const styleEntry = `main.${styleExt}`
 
+const scriptsExt = 'js'
+const scriptsEntry = `main.${scriptsExt}`
+
 const markupExt = 'html'
 const markupEntry = `index.${markupExt}`
 
 const scripts = {
   dev: {
-    in: path.join('src', 'main.js'),
+    in: path.join('src', scriptsEntry),
     watch: [
-      path.join('src', 'main.js'),
-      path.join('src', 'modules', '**', '*.js')
+      path.join('src', scriptsEntry),
+      path.join('src', 'modules', '**', `*.${scriptsExt}`)
     ],
     out: path.join('.build', 'js')
   },
   prod: {
-    in: path.join('src', 'main.js'),
+    in: path.join('src', scriptsEntry),
     out: path.join('dist', 'js')
   }
 }
 
 const styles = {
   dev: {
-    in: path.join('src', 'assets', 'styles', `${styleEntry}`),
+    in: path.join('src', 'assets', 'styles', styleEntry),
     watch: [
       path.join('src', 'assets', 'styles', '**', `*.${styleExt}`),
-      path.join('src', 'modules', '**', `${styleExt}`)
+      path.join('src', 'modules', '**', `*.${styleExt}`)
     ],
     out: path.join('.build', 'css')
   }

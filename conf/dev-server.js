@@ -8,6 +8,7 @@ function devServer(bs) {
     middleware: [history()],
     notify: false,
     ui: false,
+    ghostMode: false,
     reloadOnRestart: true,
     open: false
   })
