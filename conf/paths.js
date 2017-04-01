@@ -32,6 +32,9 @@ const styles = {
       path.join('src', 'modules', '**', `*.${styleExt}`)
     ],
     out: path.join('.build', 'css')
+  },
+  prod: {
+    out: path.join('dist', 'css')
   }
 }
 
@@ -56,6 +59,10 @@ const html = {
     watch: path.join('src', 'templates', '**', `*.${markupExt}`),
     root_out: path.join('.build'),
     templates_out: path.join('.build', 'templates')
+  },
+  prod: {
+    root_out: path.join('dist'),
+    templates_out: path.join('dist', 'templates')
   }
 }
 

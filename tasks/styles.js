@@ -36,9 +36,7 @@ function compile(reload) {
     starttag: '/* inject:start */',
     endtag: '/* inject:end */',
     addRootSlash: false,
-    transform: (filepath) => {
-      return `@import '${filepath}'`
-    }
+    transform: (filepath) => `@import '${filepath}'`
   }
 
   util.log('Compiling Styles')

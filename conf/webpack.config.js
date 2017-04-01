@@ -1,4 +1,5 @@
 const config = {
+  devTool: 'source-map',
   resolve: {
     extensions: ['', '.js']
   },

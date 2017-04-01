@@ -18,7 +18,7 @@ function compile(reload, callback) {
   util.log('Compiling JS')
   return gulp.src([scripts.dev.in])
     .pipe(named())
-    .pipe(webpack(config))
+    .pipe(webpack(config), require('webpack'))
     .on('error', handleErr)
     .pipe(gulp.dest(scripts.dev.out))
     .on('end', () => {
